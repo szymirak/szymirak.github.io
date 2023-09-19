@@ -20,7 +20,7 @@ timezone: Europe/Warsaw
 
 title: Szymon # the main title
 
-tagline: Blog o byciu mną :) # it will display as the sub-title
+tagline: Blog z mojego wspaniałego życia :D # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   github, blog 
@@ -41,7 +41,7 @@ social:
   email: szymek.raczkowski@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/szymix27 # change to your twitter homepage
+    - https://twitter.com/username # change to your twitter homepage
     - https://github.com/szymirak # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
