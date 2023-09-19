@@ -1,6 +1,6 @@
 ---
 title: "Pierwszy post"
-date: 2023-09-18 00:00:00 +0800 
+date: 2023-09-17 17:23:00 +0000 
 categories: [Blog]
 tags: [Początki]
 pin: true
