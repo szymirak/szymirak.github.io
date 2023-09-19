@@ -14,11 +14,13 @@ Chciałbym poinformować, że jest git :D
 
 Do stworzenia takiej strony wystarczy dobra edycja w programie Visual Studio Code oraz wykorzystanie Javascript w połączeniu z Jekyll theme. 
 
+## Nerd Time 
 Przykład podstawowych komend : 
 
 1. ```javascript
 $ bundle 
 ```
+ Dzięki tej komendzie jesteśmy w stanie wygenerować informacje dotyczące naszej strony html. (icon-car)
 2. ```javascript
 $ bundle exec jekyll s 
 ```

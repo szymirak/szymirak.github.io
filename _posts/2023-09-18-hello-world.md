@@ -2,7 +2,7 @@
 title: "Pierwszy post"
 date: 2023-09-17 17:23:00 +0000 
 categories: [Blog]
-tags: [Początki]
+tags: [Dzień Pierwszy]
 pin: true
 ---
 > Pamiętaj, że oglądasz to na własną odpowiedzialność
@@ -11,9 +11,9 @@ pin: true
 
 Na tej stronie będę zamieszczał pewno informacje o mnie. Miłego dnia moi WIELCY fani !! :D
 
-## Projekty 
+## Projekty do zrealizowania 
 
-* Ukończenie obrony licencjatu 
+* Wygranie w lotto 
 * Rekrutacja na studia 
 
 ## Meme of the day 
