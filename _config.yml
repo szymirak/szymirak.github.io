@@ -18,7 +18,7 @@ timezone: Europe/Warsaw
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Szymon # the main title
+title: Maciej # the main title
 
 tagline: Blog z mojego wspaniałego życia :D # it will display as the sub-title
 
@@ -38,7 +38,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Maciej
-  email: szymek.raczkowski@gmail.com # change to your email address
+  email:  # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/username # change to your twitter homepage
