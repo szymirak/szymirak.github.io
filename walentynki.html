@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ważne pytanie!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffe4e1;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            width: 400px;
+        }
+
+        /* Styl dla zdjęcia kotka */
+        .cat-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 60%; /* Robi okrągłe zdjęcie jak na TikToku */
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #d63384;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            height: 60px;
+            align-items: center;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        #yesBtn {
+            background-color: #ff4d6d;
+            color: white;
+            z-index: 1;
+        }
+
+        #noBtn {
+            background-color: #ccc;
+            color: #333;
+            position: fixed;
+            z-index: 10; /* Przycisk "Nie" musi być na wierzchu, żeby uciekał */
+        }
+
+        #yesBtn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="kotek.jpg" alt="Słodki kotek" class="cat-img" id="displayImg">
+        
+        <h1 id="questionText">Czy zostaniesz moją Walentynką? ❤️</h1>
+        
+        <div class="buttons">
+            <button id="yesBtn">TAK!</button>
+            <button id="noBtn">Nie</button>
+        </div>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const questionText = document.getElementById('questionText');
+        const displayImg = document.getElementById('displayImg');
+
+        // Funkcja uciekania przycisku "Nie"
+        noBtn.addEventListener('mouseover', () => {
+            const maxX = window.innerWidth - noBtn.offsetWidth - 10;
+            const maxY = window.innerHeight - noBtn.offsetHeight - 10;
+            
+            const x = Math.max(10, Math.min(Math.random() * maxX, maxX));
+            const y = Math.max(10, Math.min(Math.random() * maxY, maxY));
+            
+            noBtn.style.left = x + 'px';
+            noBtn.style.top = y + 'px';
+        });
+
+        // Reakcja na kliknięcie "TAK"
+        yesBtn.addEventListener('click', () => {
+            questionText.innerText = "YAYYYYYY ! Wiedziałem! hehehhehehe! 🥰";
+            // Zmiana zdjęcia na gifa szczęśliwego kotka
+            displayImg.src = "kotek.gif"; 
+            
+            noBtn.style.display = 'none';
+            yesBtn.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
