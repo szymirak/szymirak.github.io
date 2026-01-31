@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ważne pytanie!</title>
+    <title>Walentynka</title>
     <style>
         body {
             display: flex;
@@ -75,6 +75,23 @@
         #yesBtn:hover {
             transform: scale(1.1);
         }
+
+        .name-highlight {
+            color: #ff69b4;
+            font-weight: bold;
+            font-size: 1.3em;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 105, 180, 1);
+            }
+        }
     </style>
 </head>
 <body>
@@ -82,7 +99,7 @@
     <div class="card">
         <img src="kotek.jpg" alt="Słodki kotek" class="cat-img" id="displayImg">
         
-        <h1 id="questionText">Czy zostaniesz moją Walentynką? ❤️</h1>
+        <h1 id="questionText"><span class="name-highlight">Marcysia</span>, będziesz moją Walentynką? ❤️</h1>
         
         <div class="buttons">
             <button id="yesBtn">TAK!</button>
