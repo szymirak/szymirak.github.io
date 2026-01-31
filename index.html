@@ -30,7 +30,7 @@
         .cat-img {
             width: 200px;
             height: 200px;
-            border-radius: 60%; /* Robi okrągłe zdjęcie jak na TikToku chyba */
+            border-radius: 60%; /* Robi okrągłe zdjęcie jak na TikToku */
             object-fit: cover;
             margin-bottom: 20px;
         }
@@ -47,6 +47,7 @@
             gap: 20px;
             height: 60px;
             align-items: center;
+            position: relative;
         }
 
         button {
@@ -56,6 +57,7 @@
             border-radius: 10px;
             cursor: pointer;
             transition: transform 0.2s;
+            position: relative;
         }
 
         #yesBtn {
@@ -67,7 +69,6 @@
         #noBtn {
             background-color: #ccc;
             color: #333;
-            position: fixed;
             z-index: 10; /* Przycisk "Nie" musi być na wierzchu, żeby uciekał */
         }
 
@@ -96,7 +97,10 @@
         const displayImg = document.getElementById('displayImg');
 
         // Funkcja uciekania przycisku "Nie"
-        noBtn.addEventListener('mouseover', () => {
+        function moveButton() {
+            // Zmień na pozycjonowanie fixed aby ucieka po całym ekranie
+            noBtn.style.position = 'fixed';
+            
             const maxX = window.innerWidth - noBtn.offsetWidth - 10;
             const maxY = window.innerHeight - noBtn.offsetHeight - 10;
             
@@ -105,7 +109,19 @@
             
             noBtn.style.left = x + 'px';
             noBtn.style.top = y + 'px';
+        }
+
+        // Efekt na najechaniu myszą
+        noBtn.addEventListener('mouseover', moveButton);
+
+        // Efekt na dotyk (dla telefonów i iPadów)
+        noBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            moveButton();
         });
+
+        // Zmiana kurora na wskaźnik dla lepszego UX
+        noBtn.style.cursor = 'pointer';
 
         // Reakcja na kliknięcie "TAK"
         yesBtn.addEventListener('click', () => {
@@ -120,4 +136,3 @@
 
 </body>
 </html>
-
